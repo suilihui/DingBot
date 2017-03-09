@@ -1,7 +1,6 @@
 {
     "name": "lihui/ding-bot",
     "description": "使用钉钉机器人发送通知消息",
-    "type": "dev",
     "license": "FREE",
     "authors": [
         {
@@ -9,6 +8,7 @@
             "email": "466066151@qq.com"
         }
     ],
+    "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.0"
     },
