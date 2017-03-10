@@ -1,10 +1,10 @@
 {
-    "name": "lihui/ding-bot",
+    "name": "suilihui/ding-bot",
     "description": "使用钉钉机器人发送通知消息",
     "license": "FREE",
     "authors": [
         {
-            "name": "lihui",
+            "name": "suilihui",
             "email": "466066151@qq.com"
         }
     ],
