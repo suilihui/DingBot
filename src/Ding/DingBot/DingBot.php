@@ -6,11 +6,23 @@ class DingBot
 {
     private $ch;
     private $baseUri;
+    private static $instance;
     
-    function __construct($token)
+    private function __construct($token)
     {
         $this->baseUri = "https://oapi.dingtalk.com/robot/send?access_token=";
         $this->_init($token);
+    }
+    
+    /**
+     * 单例模式
+     */
+    public static function getInstance($token)
+    {
+        if (!(self::$instance instanceof DingBot))
+            self::$instance = new DingBot($token);
+            
+        return self::$instance;
     }
     
     /**
@@ -34,6 +46,8 @@ class DingBot
     public function setToken($token)
     {
         curl_setopt($this->ch, CURLOPT_URL, $this->baseUri . $token);
+        
+        return self::$instance;
     }
     
     /**
