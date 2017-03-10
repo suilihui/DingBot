@@ -1,7 +1,7 @@
 {
     "name": "suilihui/ding-bot",
     "description": "使用钉钉机器人发送通知消息",
-    "license": "FREE",
+    "license": "MIT",
     "authors": [
         {
             "name": "suilihui",
