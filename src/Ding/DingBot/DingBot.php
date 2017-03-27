@@ -62,7 +62,6 @@ class DingBot
             CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_SSL_VERIFYPEER => 0,
             CURLOPT_HEADER => 0,
-            CURLOPT_SSLVERSION => 3,
             CURLOPT_POST => 1,
             CURLOPT_POSTFIELDS => '',
             CURLOPT_FOLLOWLOCATION => 1,
