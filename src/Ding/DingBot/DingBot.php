@@ -58,10 +58,20 @@ class DingBot
         $uri = $this->baseUri . $token;
         $this->ch = curl_init($uri);
         
-        curl_setopt($this->ch, CURLOPT_POST, true);
-        curl_setopt($this->ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($this->ch, CURLOPT_TIMEOUT, 30);
-        curl_setopt($this->ch, CURLOPT_HTTPHEADER, ["Content-Type: application/json"]);
+        curl_setopt_array($ch, array(
+            CURLOPT_SSL_VERIFYHOST => 0,
+            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_HEADER => 0,
+            CURLOPT_SSLVERSION => 3,
+            CURLOPT_POST => 1,
+            CURLOPT_POSTFIELDS => '',
+            CURLOPT_FOLLOWLOCATION => 1,
+            CURLOPT_VERBOSE => 1,
+            CURLOPT_POST => true, 
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTPHEADER => ["Content-Type: application/json"],
+        ));
     }
     
     /**
