@@ -58,7 +58,7 @@ class DingBot
         $uri = $this->baseUri . $token;
         $this->ch = curl_init($uri);
         
-        curl_setopt_array($ch, array(
+        curl_setopt_array($this->ch, array(
             CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_SSL_VERIFYPEER => 0,
             CURLOPT_HEADER => 0,
