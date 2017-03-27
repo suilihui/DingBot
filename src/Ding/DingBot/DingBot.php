@@ -61,8 +61,6 @@ class DingBot
         curl_setopt_array($this->ch, array(
             CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_SSL_VERIFYPEER => 0,
-            CURLOPT_FOLLOWLOCATION => 1,
-            CURLOPT_VERBOSE => 1,
             CURLOPT_POST => true, 
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_TIMEOUT => 30,
